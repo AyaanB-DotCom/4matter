@@ -7,6 +7,9 @@ A simple TUI to help you format
 └┬┘    ╹  ╹ ╹╹ ╹ ╹  ╹ ┗━╸╹┗╸                linux / macos
 ```
 
+<img width="3454" height="2234" alt="4matter-clean" src="https://github.com/user-attachments/assets/87963591-6a92-4e57-b9f1-612fd9dc16f1" />
+
+
 **4matter** is a keyboard-driven terminal application for formatting, preparing and zero-filling USB
 drives on **Linux and macOS**. You pick the drive, say what it is for, review exactly what will happen,
 and confirm. No `lsblk`, `fdisk`, `mkfs`, `diskutil` or `dd` incantations to remember, and the same
