@@ -1,0 +1,92 @@
+/* 4matter - colour tokens (rewritten by theme.tcss() for --mono) */
+$bg: #0d0f0e;
+$panel: #131615;
+$bone: #cfc8b0;
+$moss: #7f9a66;
+$teal: #4a8782;
+$amber: #c8993a;
+$rust: #b5472f;
+$slate: #6b7680;
+$dim: #3b4240;
+$selbg: #2b2416;
+$selfg: #c8993a;
+
+Screen { background: $bg; color: $bone; scrollbar-background: $bg; scrollbar-color: $dim;
+         scrollbar-color-hover: $slate; scrollbar-color-active: $amber; }
+Header { height: 3; padding: 0 1; background: $bg; }
+Rule { height: 1; padding: 0 1; }
+StageStrip { height: 1; padding: 0 1; }
+KeyBar { height: 1; dock: bottom; padding: 0 1; background: $panel; }
+.compact Header { height: 1; }
+.compact Rule { display: none; }
+
+.panel { border: solid $bone; background: $panel; padding: 0 1; border-title-color: $teal;
+         border-title-style: bold; }
+.panel.danger { border: heavy $rust; border-title-color: $rust; }
+.panel.good { border: solid $moss; border-title-color: $moss; }
+.panel.warn { border: solid $amber; border-title-color: $amber; }
+.hdr { color: $teal; text-style: bold; margin-top: 1; }
+.compact .hdr { margin-top: 0; }
+.note { color: $slate; }
+.err { color: $rust; }
+.ok { color: $moss; }
+.warn-text { color: $amber; }
+
+#body { height: 1fr; }
+#cfg > Vertical { height: auto; width: 1fr; }
+#cfg { height: auto; }
+#drives { width: 46%; }
+#detail { width: 1fr; }
+ArtPanel { display: none; width: 1fr; }
+.wide ArtPanel { display: block; }
+ArtPanel#art-full { display: block; width: 1fr; height: 1fr; }
+.wide #drives { width: 36; }
+.wide #detail { width: 46; }
+.compact .panel { padding: 0 1; }
+
+OptionList { background: $panel; border: none; padding: 0; color: $bone; }
+OptionList > .option-list--option { padding: 0 1; }
+OptionList > .option-list--option-highlighted { background: $selbg; color: $selfg; text-style: bold; }
+OptionList:focus > .option-list--option-highlighted { background: $selbg; color: $selfg; text-style: bold; }
+OptionList > .option-list--option-hover { background: $panel; }
+OptionList > .option-list--separator { color: $dim; }
+
+Input { background: $panel; border: solid $slate; color: $bone; padding: 0 1; height: 3; }
+Input:focus { border: solid $amber; background: $panel; }
+Input > .input--placeholder { color: $slate; }
+Input > .input--cursor { background: $amber; color: $bg; }
+Input > .input--selection { background: $dim; }
+
+Button { background: $panel; color: $bone; border: solid $slate; min-width: 16; height: 3;
+         text-style: none; margin-right: 2; }
+Button:hover { background: $panel; border: solid $bone; }
+Button:focus { border: solid $amber; color: $amber; text-style: bold; background: $panel; }
+Button.-danger { border: heavy $rust; color: $rust; }
+Button.-danger:focus { border: heavy $amber; color: $amber; }
+Button:disabled { color: $dim; border: solid $dim; }
+#buttons { height: 3; margin-top: 1; }
+.compact #buttons { margin-top: 0; }
+
+RadioSet { background: $panel; border: solid $slate; padding: 0 1; height: auto; }
+RadioSet:focus { border: solid $amber; }
+RadioButton { background: $panel; color: $bone; padding: 0; }
+RadioButton > .toggle--button { color: $slate; background: $panel; }
+RadioButton.-on > .toggle--button { color: $amber; }
+RadioButton:focus > .toggle--label { text-style: bold; background: $selbg; color: $selfg; }
+Checkbox { background: $panel; border: solid $slate; color: $bone; padding: 0 1; height: 3; }
+Checkbox:focus { border: solid $amber; background: $panel; }
+Checkbox > .toggle--button { color: $slate; background: $panel; }
+Checkbox.-on > .toggle--button { color: $amber; }
+Checkbox:focus > .toggle--label { background: $panel; }
+
+Collapsible { background: $panel; border: none; padding: 0; }
+CollapsibleTitle { color: $teal; background: $panel; }
+CollapsibleTitle:hover { background: $panel; color: $amber; }
+CollapsibleTitle:focus { background: $selbg; color: $selfg; }
+Collapsible > Contents { padding: 0 0 0 2; }
+
+HelpScreen { align: center middle; background: $bg 80%; }
+#help { width: 66; height: auto; max-height: 90%; border: solid $amber; background: $panel;
+        padding: 1 2; }
+ProgressPanel { height: auto; }
+#log { color: $slate; height: auto; }
